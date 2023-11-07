@@ -1,0 +1,53 @@
+
+{{slugArray = url | explode('/')}}
+{{teamArray = ["boys-jv", "boys-varsity", "girls-jv", "girls-varsity"]}}
+{{ scheduleTypeArray = ["u", "r"]}}
+{{team = ""}}
+
+{{slugArray}}
+    {{if teamArray | contains({value})}}
+        {{team = value}}
+    {{/if}}
+{{/slugArray}}
+
+{{baseUrl = "http://soccer2.test"}}
+
+
+<nav
+    class="flex justify-between items-center bg-bg-primary p-4 text-white font-extralight leading-4 text-xl"
+>
+
+    <div class="flex items-center font-bold">
+        <a href="/"
+            ><img class="w-[75px]" src="{{site_data:logo}}" alt="Logo"
+        /></a>
+
+        <select name="team" id="teamSelector" class="text-black rounded-md ml-4 text-md px-2 py-1">
+            <option value="girls-jv">Girls JV</option>
+            <option value="girls-varsity">Girls Varsity</option>
+            <option value="boys-jv">Boys JV</option>
+            <option value="boys-varsity">Boys Varsity</option>
+        </select>
+
+    </div>
+    <ul class="flex">
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/news">News</a>
+        </li>
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/{{if team}}{{team}}{{else}}boys-jv{{/if}}/schedule">Schedule</a>
+        </li>
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/{{if team}}{{team}}{{else}}boys-jv{{/if}}/roster">Roster</a>
+        </li>
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/{{if team}}{{team}}{{else}}boys-jv{{/if}}/stats">Stats</a>
+        </li>
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/coaches">Coaches</a>
+        </li>
+        <li class="p-2">
+            <a class="hover:underline pb-2" href="{{baseUrl}}/shop">Shop</a>
+        </li>
+    </ul>
+</nav>
