@@ -4,6 +4,8 @@
 {{second = theTeam[1]}}
 {{finalTeam = first + "_" + second | camelize}}
 {{scheduleType = slugArray[2]}}
+{{dateArray = now | explode(" ")}}
+{{currentYear = dateArray[2]}}
 
 
 <section class="mx-auto flex flex-col mt-4 w-full lg:w-3/12 bg-white">
@@ -14,22 +16,19 @@
     </div>
 
 
-    {{collection:games | sort(date)}}
-
-        {{if team == finalTeam}}
-            {{if scheduleType == "u"}}
-                {{if date | is_future || date | is_today}}
+    {{if scheduleType == "u"}}
+        {{collection:games team:is="{finalTeam}" year:is="{currentYear}"}}
+            {{if date | is_future || date | is_today}}
                     {{partial:scheduleWidgetGame}}
-                {{/if}}
-            {{ else if scheduleType == "r"}}
-                {{if date | is_past }}
-                    {{partial:scheduleWidgetGame}}
-                {{/if}}
             {{/if}}
-        {{/if}}
-
-
-    {{/collection:games}}
+        {{/collection:games}}
+    {{else if scheduleType == "r"}}
+        {{collection:games team:is="{finalTeam}" year:is="{currentYear}"}}
+            {{if date | is_past && date | is_today == false}}
+                {{partial:scheduleWidgetGame}}
+            {{/if}}
+        {{/collection:games}}
+    {{/if}}
 
 
 </section>  
