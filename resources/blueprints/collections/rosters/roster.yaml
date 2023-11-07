@@ -12,6 +12,18 @@ tabs:
               validate:
                 - required
           -
+            handle: year
+            field:
+              type: integer
+              display: Year
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+          -
             handle: team
             field:
               options:
@@ -29,6 +41,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 50
           -
             handle: players
             field:

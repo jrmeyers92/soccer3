@@ -17,6 +17,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 50
           -
             handle: mascot
             field:
@@ -30,6 +31,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 50
           -
             handle: logo
             field:
@@ -48,3 +50,29 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: current_boys_year
+            field:
+              type: integer
+              display: 'Current Boys Year'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+              instructions: 'This field is used to select games/schedules, rosters, and stats for the correct year.'
+          -
+            handle: current_girls_year
+            field:
+              type: integer
+              display: 'Current Girls Year'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+              instructions: 'This field is used to select games/schedules, rosters, and stats for the correct year.'

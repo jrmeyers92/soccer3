@@ -1,8 +1,8 @@
 ---
-id: 8901ef2f-ec2e-4dd5-9cf4-84046dd93812
+id: 9215cac3-bda2-4857-a514-0ba3a0d4e859
 blueprint: news
-title: 'this is a test'
-subtitle: 'this is also a test test test test test lorem ipsum test'
+title: 'This is a test'
+subtitle: "more test stuff. Here's some test stuff"
 cover_photo: mainphoto.png
 additional_photos:
   - photo1.png
@@ -10,6 +10,6 @@ additional_photos:
   - photo3.png
 date: '2023-11-07'
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1699324117
+updated_at: 1699376744
 ---
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nam aliquid vitae, dolores debitis, accusantium pariatur, a consequatur adipisci dicta numquam nihil iure illo esse fugit. Dolorum minima velit inventore officiis quibusdam, consequatur expedita esse quidem, quisquam illum eius ab quasi est nulla! Quia, facere.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, libero assumenda dolorum incidunt et soluta, dolore blanditiis repudiandae dignissimos consequatur iste commodi neque, quod ipsam autem a. Fugiat numquam quae, nemo placeat recusandae fuga odio id temporibus officiis quis nobis quas dignissimos facere obcaecati porro. Iure tempore numquam quibusdam asperiores aliquam omnis eius? Adipisci, obcaecati.

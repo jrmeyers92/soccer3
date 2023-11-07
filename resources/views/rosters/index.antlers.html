@@ -1,0 +1,58 @@
+{{slugArray = url | explode('/')}}
+{{theTeam = slugArray[1] | explode("-")}}
+{{gender = theTeam[0]}}
+{{jvOrVarsity = theTeam[1]}}
+{{finalTeam = gender + "_" + jvOrVarsity | camelize}}
+{{currentYear = ""}}
+{{if gender == "boys"}}
+    {{currentYear = site_data:current_boys_year}}
+{{else}}
+    {{currentYear = site_data:current_girls_year}}
+{{/if}}
+
+<section class="p-4 bg-white m-4">
+    {{collection:rosters limit=1 team:is="{finalTeam}" year:is="{currentYear}" as="roster"}}
+    <h1 class="text-3xl mb-4">{{currentYear}} {{gender | ucfirst}} {{if jvOrVarsity == "jv"}}JV{{/if}} {{if jvOrVarsity == "varsity"}}Varsity{{/if}} Roster</h1>
+
+
+        {{ if roster  | is_empty }}
+            <p>Sorry no roster available at this time.</p>
+        {{else}}
+            {{roster}}
+
+                {{players}}
+                    <div class="flex items-center odd:bg-gray-100 p-2 border-t border-gray-300">
+                        <div class="flex items-center w-1/2">
+                            {{ if image}}
+                                <img src="{{ glide src="{image}" w="100" h="120" }}" alt="{alt}">
+                            {{/if}}
+                            <div class="flex flex-col ml-4">
+                                <div class="text-sm font-bold py-1 mb-4">
+                                    {{position}}
+                                        {{if position | length != 1}}
+                                            {{if !last}}
+                                                {{value}} /
+                                            {{else}}
+                                                {{value}}
+                                            {{/if}}
+                                        {{else}}
+                                            {{value}}
+                                        {{/if}}
+                                    {{/position}}
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <span class="bg-primary-800 py-1 px-2 text-white">{{number}}</span> <span class="ml-2 text-2xl text-gray-500">{{first_name}} {{last_name}} {{if captain}} (c) {{/if}} </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="w-1/2 text-lg italic">{{grade | ucfirst}}</p>
+                    </div>
+                {{/players}}
+
+            {{/roster}}
+
+        {{/if}}
+
+    {{/collection:rosters}}
+</section>
+
