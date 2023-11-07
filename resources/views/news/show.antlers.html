@@ -1,0 +1,31 @@
+<article class="flex flex-col items-center my-4 articleShow">
+    <div class="">
+        <div class="mb-4 max-w-lg">
+            <h1 class="text-4xl mb-2">{{title}}</h1>
+            <h2 class="mb-2 text-2xl">{{subtitle}}</h2>
+
+            <a class="inline-flex w-auto items-center justify-center border border-primary-800 text-primary-800 px-2 py-1 hover:bg-primary-800 hover:text-white duration-150" href="mailto:?subject={{title}}&body=Check out the latest news article about {{data:school_name}}, http://soccer2.test{{url}}"><span class="mr-1">share </span><ion-icon name="share-alt"></ion-icon></a>
+        </div>
+      <img src="{{ glide src="{{cover_photo}}" width="800" height="300" }}" alt="{{alt}}" class="mb-2"> 
+
+        <div>
+            <p> {{boys_jv_score}} </p>
+            <p>{{boys_jv_opponent_score}}</p>
+            <p> {{boys_varsity_score}} </p>
+            <p>{{boys_varsity_opponent_score}}</p>
+            <p> {{girls_jv_score}} </p>
+            <p>{{girls_jv_opponent_score}}</p>
+            <p> {{girls_varsity_score}} </p>
+            <p>{{girls_varsity_opponent_score}}</p>
+        </div>
+        <div class="max-w-2xl">{{content}}</div>
+
+
+    </div>
+
+
+    
+    
+   
+</article>
+

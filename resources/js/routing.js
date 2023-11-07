@@ -1,5 +1,7 @@
 (function() {
 
+    console.log('this ran')
+
     const teams = ["girls-jv", "girls-varsity", "boys-jv", "boys-varsity"]
     const pagesNotTeamDependent = ["news", "coaches","shop" ]
 
@@ -11,7 +13,7 @@
 
 
     // re-reoute of of "/" to value saved in localstorage or default to boys-jv
-    if (window.location.href == "http://soccer2.test/") {
+    if (window.location.href == "http://soccer3.test/") {
         if (localStorage.getItem("team")) {
             document.getElementById('teamSelector').value = localStorage.getItem('team')
 
@@ -19,13 +21,13 @@
                 let scheduleWidgetValue = localStorage.getItem('scheduleWidgetValue');
                 let schedulePath = scheduleWidgetValue= "upcoming" ? "u" : "r";
 
-                window.location.href=`http://soccer2.test/${localStorage.getItem("team")}/${schedulePath}`;
+                window.location.href=`http://soccer3.test/${localStorage.getItem("team")}/${schedulePath}`;
 
             } else {
-                window.location.href=`http://soccer2.test/${localStorage.getItem("team")}/u`;
+                window.location.href=`http://soccer3.test/${localStorage.getItem("team")}/u`;
             }
         } else {
-            window.location.href = "http://soccer2.test/boys-jv/u";
+            window.location.href = "http://soccer3.test/boys-jv/u";
         }
     }
 
@@ -43,7 +45,7 @@
         let pathArray = window.location.pathname.split('/')
         pathArray[1] = e.target.value;
         let finishedPath = pathArray.join('/');
-        window.location.href = `http://soccer2.test${finishedPath}`
+        window.location.href = `http://soccer3.test${finishedPath}`
     })
 
 
@@ -57,7 +59,7 @@
             localStorage.setItem('scheduleWidgetValue', value);
             let pathArray = window.location.pathname.split('/')
             let team = pathArray[1]
-            window.location.href=`http://soccer2.test/${team}/${schedulePath}`
+            window.location.href=`http://soccer3.test/${team}/${schedulePath}`
         })
     })
 

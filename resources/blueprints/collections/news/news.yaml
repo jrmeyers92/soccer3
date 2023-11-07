@@ -1,0 +1,237 @@
+title: News
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              antlers: false
+              type: textarea
+              display: Subtitle
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: cover_photo
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Cover Photo'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: additional_photos
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Additional Photos'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: game
+            field:
+              mode: toggle
+              input_label: 'Is this article a game recap?'
+              type: revealer
+              display: Game
+              icon: revealer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: teams
+            field:
+              options:
+                'Boys JV': boys_jv
+                'Boys Varsity': boys_varsity
+                'Girls JV': girls_jv
+                'Girls Varsity': girls_varsity
+              inline: false
+              type: checkboxes
+              display: Teams
+              icon: checkboxes
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+          -
+            handle: boys_jv_score
+            field:
+              type: integer
+              display: 'Boys JV Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Boys JV'
+              width: 50
+          -
+            handle: boys_jv_opponent_score
+            field:
+              type: integer
+              display: 'Boys JV Opponent Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Boys JV'
+              width: 50
+          -
+            handle: boys_varsity_score
+            field:
+              type: integer
+              display: 'Boys Varsity Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Boys Varsity'
+              width: 50
+          -
+            handle: boys_varsity_opponent_score
+            field:
+              type: integer
+              display: 'Boys Varsity Opponent Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Boys Varsity'
+              width: 50
+          -
+            handle: girls_jv_score
+            field:
+              type: integer
+              display: 'Girls JV Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Girls JV'
+              width: 50
+          -
+            handle: girls_jv_opponent_score
+            field:
+              type: integer
+              display: 'Girls JV Opponent Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Girls JV'
+              width: 50
+          -
+            handle: girls_varsity_score
+            field:
+              type: integer
+              display: 'Girls Varsity Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Girls Varsity'
+              width: 50
+          -
+            handle: girls_varsity_opponent_score
+            field:
+              type: integer
+              display: 'Girls Varsity Opponent Score'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                game: 'equals true'
+                teams: 'contains Girls Varsity'
+              width: 50
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

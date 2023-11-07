@@ -1,1 +1,5 @@
 title: 'Site Data'
+data:
+  school_name: Glendale
+  mascot: Falcons
+  logo: logo.png
