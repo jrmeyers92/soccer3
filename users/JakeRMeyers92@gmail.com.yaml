@@ -2,3 +2,11 @@ name: 'Jake Meyers'
 super: true
 id: dcb3e717-ab7c-4904-ad16-fd20b558ff69
 password_hash: $2y$10$2iMoc8UEP4zcN.hU7jp8WOtNZzIeeAwITzPdyp/CinNW1JgjRRJe2
+preferences:
+  collections:
+    games:
+      columns:
+        - team
+        - date
+        - slug
+        - status

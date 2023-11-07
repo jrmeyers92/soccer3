@@ -1,0 +1,13 @@
+---
+id: fcbf14e6-dfd5-4435-91ad-46ddda1520f0
+blueprint: game
+title: 'adjf akldgj'
+year: 2023
+location: home
+time: '15:00'
+date: '2023-11-17'
+team: boys_varsity
+opponent: 39c41e15-7758-4b70-9205-24dcd78693a2
+updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
+updated_at: 1699366274
+---
