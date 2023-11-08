@@ -1,9 +1,18 @@
-<section class="mx-auto flex flex-col mt-4 lg:w-9/12">
-    {{partial:section_heading title="Latest Headlines"}} {{collection:news}}
-
-    <div class="p-4 bg-white border-b border-slate-200">
-        {{ if index == 0 }} {{ partial:featured_news_card}} {{ else }}
-        {{partial:news_card}} {{ /if }}
+<section class="mx-auto flex flex-col my-4 lg:w-9/12">
+    {{partial:section_heading title="Latest Headlines"}} 
+    
+    <div>
+        {{collection:news orderby(date) as="articles" limit='5'}}
+            {{articles}}
+                <div class="p-4 bg-white border-b border-slate-200 last:pb-6">
+                    {{ if index == 0 }} {{ partial:featured_news_card}} {{ else }}
+                    {{partial:news_card}} {{ /if }}
+                </div>
+            {{/articles}}
+        {{/collection:news}}
     </div>
-    {{/collection:news}}
+    <a href="/news" class="p-2 bg-primary-700 text-white font-bold">View More Headlines</a>
 </section>
+
+
+

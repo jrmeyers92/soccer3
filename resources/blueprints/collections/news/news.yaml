@@ -236,3 +236,12 @@ tabs:
               default: now
               validate:
                 - required
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - news
+              max_items: 1
+              listable: false
+              localizable: true
