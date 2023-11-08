@@ -32,7 +32,7 @@
     }
 
 
-
+    // set selector for pages that are team independent
     if (pagesNotTeamDependent.includes(window.location.pathname.split("/")[1])) {
         if (localStorage.getItem("team")) {
             document.getElementById('teamSelector').value = localStorage.getItem('team')
@@ -43,9 +43,15 @@
     document.getElementById('teamSelector').addEventListener('change', (e) => {
         window.localStorage.setItem("team", e.target.value);
         let pathArray = window.location.pathname.split('/')
-        pathArray[1] = e.target.value;
-        let finishedPath = pathArray.join('/');
-        window.location.href = `http://soccer3.test${finishedPath}`
+        
+        if (pagesNotTeamDependent.includes(pathArray[1])) {
+            localStorage.setItem('team', e.target.value)
+
+        } else {
+            pathArray[1] = e.target.value;
+            let finishedPath = pathArray.join('/');
+            window.location.href = `http://soccer3.test${finishedPath}`
+        }
     })
 
 
