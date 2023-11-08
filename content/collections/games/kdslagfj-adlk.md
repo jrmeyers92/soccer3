@@ -1,7 +1,7 @@
 ---
 id: 90272c2e-7046-41db-b9b6-8e156fb5bfa5
 blueprint: game
-title: 'kdslagfj adlk'
+title: 'boys_varsity - 2023-09-19 00:00:00'
 year: 2023
 location: home
 time: '11:00'

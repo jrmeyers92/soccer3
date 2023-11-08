@@ -51,10 +51,10 @@ fields:
     handle: position
     field:
       options:
-        G: G
-        D: D
-        M: M
-        F: F
+        goalie: Goalie
+        defense: Defense
+        midfield: Midfield
+        forward: Forward
       inline: false
       type: checkboxes
       display: Position

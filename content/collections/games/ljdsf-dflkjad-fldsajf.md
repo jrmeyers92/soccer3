@@ -1,7 +1,7 @@
 ---
 id: 150e6beb-282c-48ea-8536-c8eeb2368515
 blueprint: game
-title: 'ljdsf dflkjad fldsajf'
+title: 'boys_varsity - 2022-09-14 00:00:00'
 year: 2022
 location: home
 time: '12:00'

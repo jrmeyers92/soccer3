@@ -1,7 +1,7 @@
 ---
 id: 5940d06c-592d-4600-b13a-d20fe1eb774c
 blueprint: game
-title: asfdmcdkd
+title: 'boys_varsity - 2023-11-08 00:00:00'
 year: 2023
 location: home
 time: '18:00'

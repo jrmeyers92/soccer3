@@ -68,11 +68,13 @@ tabs:
           -
             handle: game
             field:
-              mode: toggle
-              input_label: 'Is this article a game recap?'
-              type: revealer
+              mode: default
+              create: true
+              collections:
+                - games
+              type: entries
               display: Game
-              icon: revealer
+              icon: entries
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -231,7 +233,6 @@ tabs:
             handle: date
             field:
               type: date
-              required: true
               default: now
               validate:
                 - required

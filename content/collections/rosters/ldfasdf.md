@@ -11,8 +11,7 @@ players:
     last_name: Allen
     grade: freshman
     position:
-      - D
-      - M
+      - defense
     bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt voluptate quaerat? Exercitationem perferendis, optio nesciunt, officiis ad magni, iste adipisci illum id nemo quasi?'
     type: new_set
     enabled: true
@@ -24,7 +23,7 @@ players:
     last_name: Bing
     grade: sophmore
     position:
-      - G
+      - midfield
     captain:
       - captain
     bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt voluptate quaerat? Exercitationem perferendis, optio nesciunt, officiis ad magni, iste adipisci illum id nemo quasi?'
@@ -38,7 +37,8 @@ players:
     last_name: Rogers
     grade: sophmore
     position:
-      - D
+      - goalie
+      - defense
     bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt voluptate quaerat? Exercitationem perferendis, optio nesciunt, officiis ad magni, iste adipisci illum id nemo quasi?'
     image: playerimage.jpeg
     type: new_set
@@ -50,7 +50,7 @@ players:
     last_name: Smith
     grade: sophmore
     position:
-      - M
+      - defense
     bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt voluptate quaerat? Exercitationem perferendis, optio nesciunt, officiis ad magni, iste adipisci illum id nemo quasi?'
     image: playerimage.jpeg
     type: new_set
@@ -62,7 +62,8 @@ players:
     last_name: Barnes
     grade: sophmore
     position:
-      - D
+      - midfield
+      - forward
     captain:
       - captain
     number: 2
@@ -74,12 +75,13 @@ players:
     first_name: John
     last_name: Ryan
     position:
-      - M
+      - defense
+      - forward
     number: 14
     grade: freshman
     image: playerimage.jpeg
     type: new_set
     enabled: true
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1699397673
+updated_at: 1699409503
 ---
