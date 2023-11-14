@@ -25,6 +25,24 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: category
+            field:
+              options:
+                'Boys JV': 'Boys JV'
+                'Boys Varsity': 'Boys Varsity'
+                'Girls JV': 'Girls JV'
+                'Girls Varsity': 'Girls Varsity'
+                Announcement: Announcement
+              inline: false
+              type: checkboxes
+              display: Category
+              icon: checkboxes
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: content
             field:
               type: markdown
@@ -66,159 +84,20 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: game
+            handle: games
             field:
               mode: default
               create: true
               collections:
                 - games
               type: entries
-              display: Game
+              display: Games
               icon: entries
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: teams
-            field:
-              options:
-                'Boys JV': boys_jv
-                'Boys Varsity': boys_varsity
-                'Girls JV': girls_jv
-                'Girls Varsity': girls_varsity
-              inline: false
-              type: checkboxes
-              display: Teams
-              icon: checkboxes
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-          -
-            handle: boys_jv_score
-            field:
-              type: integer
-              display: 'Boys JV Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Boys JV'
-              width: 50
-          -
-            handle: boys_jv_opponent_score
-            field:
-              type: integer
-              display: 'Boys JV Opponent Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Boys JV'
-              width: 50
-          -
-            handle: boys_varsity_score
-            field:
-              type: integer
-              display: 'Boys Varsity Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Boys Varsity'
-              width: 50
-          -
-            handle: boys_varsity_opponent_score
-            field:
-              type: integer
-              display: 'Boys Varsity Opponent Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Boys Varsity'
-              width: 50
-          -
-            handle: girls_jv_score
-            field:
-              type: integer
-              display: 'Girls JV Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Girls JV'
-              width: 50
-          -
-            handle: girls_jv_opponent_score
-            field:
-              type: integer
-              display: 'Girls JV Opponent Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Girls JV'
-              width: 50
-          -
-            handle: girls_varsity_score
-            field:
-              type: integer
-              display: 'Girls Varsity Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Girls Varsity'
-              width: 50
-          -
-            handle: girls_varsity_opponent_score
-            field:
-              type: integer
-              display: 'Girls Varsity Opponent Score'
-              icon: integer
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              if:
-                game: 'equals true'
-                teams: 'contains Girls Varsity'
-              width: 50
   sidebar:
     display: Sidebar
     sections:
