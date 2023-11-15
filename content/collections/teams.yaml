@@ -1,0 +1,6 @@
+title: Teams
+template: teams/show
+revisions: false
+date_behavior:
+  past: public
+  future: private

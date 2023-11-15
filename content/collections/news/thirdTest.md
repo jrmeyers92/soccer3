@@ -8,8 +8,8 @@ additional_photos:
   - photo1.png
   - photo2.png
   - photo3.png
-date: '2023-10-03'
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1699413479
+updated_at: 1700004245
+publish_date: '2023-11-08'
 ---
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nam aliquid vitae, dolores debitis, accusantium pariatur, a consequatur adipisci dicta numquam nihil iure illo esse fugit. Dolorum minima velit inventore officiis quibusdam, consequatur expedita esse quidem, quisquam illum eius ab quasi est nulla! Quia, facere.
