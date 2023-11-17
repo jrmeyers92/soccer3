@@ -13,49 +13,60 @@
 {{/if}}
 
 
-{{currentDate = ""}}
+{{currentYear = ""}}
 {{if gender == "boys"}}
-    {{currentDate = site_data:current_boys_year}}
+    {{currentYear = site_data:current_boys_year}}
 {{else}}
-    {{currentDate = site_data:current_girls_year}}
+    {{currentYear = site_data:current_girls_year}}
 {{/if}}
 
 
 
 <section class="mx-auto flex flex-col mt-4 w-full lg:w-3/12 bg-white">
-    {{partial:section_heading title="{currentDate} {gender | ucfirst} {scheduleTeamTitle} Schedule"}}
+    {{partial:section_heading title="{currentYear} {gender | ucfirst} {scheduleTeamTitle} Schedule"}}
     <div class="flex border-b border-slate-300">
         <button class="w-full py-2 px-4 scheduleSelectorBtn border-r border-slate-300 {{if scheduleType == "u"}} border-b-2 border-b-primary-500 font-bold {{/if}} " id="upcoming">Upcoming</button>
         <button class="w-full py-2 px-4 scheduleSelectorBtn {{if scheduleType == "r"}} border-b-2 border-b-primary-500 font-bold {{/if}} " id="results" >Results</button>
     </div>
 
+
     {{if scheduleType == "u"}}
-        {{collection:games | sort="game_date:desc" team:is="{finalTeam}" year:is="{currentYear}"  as="schedule"}}
+        {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
 
             {{if schedule | is_empty}}
                 <p class="p-2">There are no upcoming games at this time.</p>
             {{else}}
                 {{schedule }}
-
-                    {{if game_date | is_future || game_date | is_today}}
+                  {{if game_date | is_future || game_date | is_today}}
                         {{partial:scheduleWidgetGame}}
-                    {{/if}}
+                    {{/if}} 
 
                 {{/schedule}}
             {{/if}}
 
         {{/collection:games}}
 
+        {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear + 1}" as="schedule"}}
+
+            {{schedule }}
+                {{if game_date | is_future || game_date | is_today}}
+                    {{partial:scheduleWidgetGame}}
+                {{/if}} 
+
+            {{/schedule}}
+
+    {{/collection:games}}
+
     {{ else if scheduleType == "r"}}
 
-        {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
+        {{collection:games | sort="game_date:desc" team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
 
             {{if schedule | is_empty}}
                 <p class="p-2">Sorry, no results at this time.</p>
             {{else}}
                 {{schedule}}
 
-                    {{if date | is_past && date | is_today == false}}
+                    {{if game_date | is_past && game_date | is_today == false}}
                         {{partial:scheduleWidgetGame}}
                     {{/if}}
 
