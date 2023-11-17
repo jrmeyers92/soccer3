@@ -31,6 +31,7 @@
 
     {{if scheduleType == "u"}}
         {{collection:games team:is="{finalTeam}" year:is="{currentYear}"  as="schedule"}}
+            {{schedule | filterSchedule}}
 
             {{if schedule | is_empty}}
                 <p class="p-2">There are no upcoming games at this time.</p>
