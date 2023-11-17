@@ -61,7 +61,7 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: date
+            handle: game_date
             field:
               mode: single
               inline: false

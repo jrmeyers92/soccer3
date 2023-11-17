@@ -30,34 +30,40 @@
     </div>
 
     {{if scheduleType == "u"}}
-        {{collection:games team:is="{finalTeam}" year:is="{currentYear}"  as="schedule"}}
-            {{schedule | filterSchedule}}
+        {{collection:games | sort="game_date:desc" team:is="{finalTeam}" year:is="{currentYear}"  as="schedule"}}
 
             {{if schedule | is_empty}}
                 <p class="p-2">There are no upcoming games at this time.</p>
             {{else}}
                 {{schedule }}
-                    {{if date | is_future || date | is_today}}
+
+                    {{if game_date | is_future || game_date | is_today}}
                         {{partial:scheduleWidgetGame}}
                     {{/if}}
 
                 {{/schedule}}
             {{/if}}
+
         {{/collection:games}}
-    {{else if scheduleType == "r"}}
-        {{collection:games team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
+
+    {{ else if scheduleType == "r"}}
+
+        {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
+
             {{if schedule | is_empty}}
                 <p class="p-2">Sorry, no results at this time.</p>
             {{else}}
                 {{schedule}}
+
                     {{if date | is_past && date | is_today == false}}
                         {{partial:scheduleWidgetGame}}
                     {{/if}}
+
                 {{/schedule}}
             {{/if}}
         {{/collection:games}}
-    {{/if}}
 
+    {{/if}}
 
 </section>  
 

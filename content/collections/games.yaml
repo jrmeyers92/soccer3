@@ -2,7 +2,7 @@ title: Games
 template: schedule
 layout: layout
 revisions: false
-title_format: '{team} - {date}'
+title_format: '{team} - {game_date}'
 sort_dir: asc
 date_behavior:
   past: public
