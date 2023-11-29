@@ -9,7 +9,6 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
               validate:
                 - required
               instructions_position: above

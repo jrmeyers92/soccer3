@@ -8,7 +8,6 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
               validate:
                 - required
           -
@@ -27,6 +26,19 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 50
+          -
+            handle: year
+            field:
+              type: integer
+              display: Year
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
           -
             handle: sport
             field:
@@ -46,6 +58,25 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 50
+          -
+            handle: team
+            field:
+              options:
+                freshman: Freshman
+                jv: JV
+                varsity: Varsity
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Team
+              icon: radio
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
   sidebar:
     display: Sidebar
     sections:
@@ -56,4 +87,20 @@ tabs:
             field:
               type: slug
               localizable: true
+  schedule:
+    display: Schedule
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: schedule
+  roster:
+    display: Roster
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: roster
 title: Team

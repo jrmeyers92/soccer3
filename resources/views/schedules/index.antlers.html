@@ -12,30 +12,26 @@
     {{scheduleTeamTitle = "Varsity"}}
 {{/if}}
 
+{{collection:teams | sort="year:desc" team:is="{jvOrVarsity}" gender:is="{gender}" as="team" limit="1"}}
+    {{if team}}
+        {{team}}
+            <section class="p-4 bg-white m-4">
 
-{{currentYear = ""}}
-{{if gender == "boys"}}
-    {{currentYear = site_data:current_boys_year}}
-{{else}}
-    {{currentYear = site_data:current_girls_year}}
-{{/if}}
+                {{if team == "jv"}}
+                    <h1 class="text-3xl mb-4">{{year}} {{gender | ucfirst}} {{team | ucfirst}} Schedule </h1>
+                {{else}}
+                    {{partial:section_heading title="{year} {gender | ucfirst} {team | ucfirst} Schedule"}}
+                {{/if}}
 
+                {{if games| is_empty}}
+                    <p class="p-2">There are no upcoming games at this time.</p>
+                {{else}}
+                    {{games | sort="game_date:desc"}}
+                        {{partial:scheduleWidgetGame}}
+                    {{/games}}
+                {{/if}}
 
-<section>
-    <h1 class="my-6 text-4xl text-center">{{currentYear}} {{gender | ucfirst}} {{scheduleTeamTitle}} Schedule</h1>
-    {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear}" as="schedule"}}
-    {{if schedule | is_empty}}
-        <p class="p-2">There are no upcoming games at this time.</p>
-    {{else}}
-        {{schedule }}
-            {{partial:schedule_page_game}}
-        {{/schedule}}
-    {{/if}}
-    {{/collection:games}}
-    
-    {{collection:games | sort="game_date:asc" team:is="{finalTeam}" year:is="{currentYear + 1}" as="schedule"}}
-        {{schedule }}
-            {{partial:schedule_page_game}}
-        {{/schedule}}
-    {{/collection:games}}
-</section>
+            </section>
+        {{/team}}
+    {{/if}}     
+{{/collection:teams}}

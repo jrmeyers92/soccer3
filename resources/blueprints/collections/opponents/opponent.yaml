@@ -8,7 +8,8 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
+              validate:
+                - required
           -
             handle: school_name
             field:
@@ -49,6 +50,36 @@ tabs:
               type: assets
               display: Logo
               icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: opponent_school_city
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Opponent School City'
+              icon: text
+              instructions: 'The city in which the opponent is located.'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: opponent_school_state
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Opponent School State'
+              icon: text
+              instructions: 'The state in which the school is located'
+              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
