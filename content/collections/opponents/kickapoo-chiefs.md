@@ -7,7 +7,7 @@ mascot: Chiefs
 logo:
   - kickapoologo.png
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1701230420
-opponent_school_city: Springfield
-opponent_school_state: Missouri
+updated_at: 1701233284
+opponent_school_city: Denver
+opponent_school_state: Colorado
 ---

@@ -50,3 +50,31 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: school_city
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'School City'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: school_state
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'School State'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

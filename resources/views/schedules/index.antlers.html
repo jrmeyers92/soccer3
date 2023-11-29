@@ -27,10 +27,9 @@
                     <p class="p-2">There are no upcoming games at this time.</p>
                 {{else}}
                     {{games | sort="game_date:desc"}}
-                        {{partial:scheduleWidgetGame}}
+                        {{partial:schedule_page_game}}
                     {{/games}}
                 {{/if}}
-
             </section>
         {{/team}}
     {{/if}}     
