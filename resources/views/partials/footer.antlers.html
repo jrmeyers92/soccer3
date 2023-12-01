@@ -1,0 +1,15 @@
+<footer class="bg-primary min-h-[200px] text-white relative flex items-center px-2 sm:px-4 justify-between">
+
+    <div class="whitespace-nowrap md:pr-8 lg:pr-12">
+        <p class="">&#169; {{now | format="Y"}} {{site_data:school_name}} High School Athletics</p>
+        <p>{{site_data:street_address}}, {{site_data:school_city}}, {{site_data:school_state}} {{site_data:zip_code}}</p>
+    </div>
+    <div class="flex items-center justify-center flex-wrap my-12">
+    
+        {{collection:sponsers}}
+            <a href="{{company_url}}" target="_blank"><img src="{{company_logo}}" class="h-[50px] mx-2" alt="{{alt || title}}" /></a>
+        {{/collection:sponsers}}
+    </div>
+
+    <p class="absolute mx-auto text-center bottom-2 block w-full">Site Managed by <a href="#" >Jake Meyers Development</a></p>
+</footer>

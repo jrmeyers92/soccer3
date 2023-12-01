@@ -7,14 +7,14 @@ year: 2023
 sport: soccer
 team: jv
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1701227110
+updated_at: 1701378690
 games:
   -
     id: lpifrk64
     game_date: '2023-09-06'
     time: '18:00'
     location: home
-    opponent: 39c41e15-7758-4b70-9205-24dcd78693a2
+    opponent: 600030fc-7634-4122-acf1-537c77705e93
     our_score: 2
     opponent_score: 1
     main_photo: mainphoto.png

@@ -77,6 +77,21 @@ tabs:
               replicator_preview: true
               hide_display: false
               width: 50
+          -
+            handle: sponsers
+            field:
+              mode: default
+              create: true
+              collections:
+                - sponsers
+              type: entries
+              display: Sponsers
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:

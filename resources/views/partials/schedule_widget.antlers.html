@@ -15,7 +15,7 @@
 {{collection:teams | sort="year:desc" team:is="{jvOrVarsity}" gender:is="{gender}" as="team" limit="1"}}
     {{if team}}
         {{team}}
-            <section class="mx-auto flex flex-col mt-4 w-full lg:w-3/12 bg-white self-baseline">
+            <section class="mx-auto flex flex-col w-full  bg-white self-baseline">
 
                 {{if team == "jv"}}
                     {{partial:section_heading title="{year} {gender | ucfirst} {team | upper} Schedule"}}
@@ -49,7 +49,7 @@
                         {{/games}}
                     {{/if}}
                 {{/if}}
-                <a href="/{{gender}}-{{jvOrVarsity}}/schedule" class="p-2 bg-primary-700 text-white font-bold hover:bg-primary-800 duration-150">View Full Schedule</a>
+                <a href="/{{gender}}-{{jvOrVarsity}}/schedule" class="p-2 bg-primary-500 text-white font-bold hover:bg-primary-600 duration-150">View Full Schedule</a>
 
             </section>
         {{/team}}

@@ -3,5 +3,8 @@ data:
   school_name: Glendale
   mascot: Falcons
   logo: logo.png
+  email: glendalesoccer@gmail.com
+  street_address: '1300 N. Randough St'
   school_city: Springfield
   school_state: Missouri
+  zip_code: 63117

@@ -7,7 +7,7 @@ year: 2022
 sport: soccer
 team: jv
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1701227104
+updated_at: 1701378525
 games:
   -
     id: lpifrk64
@@ -121,4 +121,7 @@ players:
     image: playerimage.jpeg
     type: new_set
     enabled: true
+sponsers:
+  - 90ddffd9-8d1e-4310-b533-c7bb2b25e651
+  - 09dbaf30-64b8-41e6-a2d0-800de87ae650
 ---
