@@ -123,3 +123,39 @@ fields:
       replicator_preview: true
       hide_display: false
       max_files: 1
+  -
+    handle: goals
+    field:
+      type: integer
+      display: Goals
+      icon: integer
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: assists
+    field:
+      type: integer
+      display: Assists
+      icon: integer
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: shutouts
+    field:
+      type: integer
+      display: Shutouts
+      icon: integer
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -7,7 +7,7 @@ year: 2023
 sport: soccer
 team: jv
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1701492130
+updated_at: 1701537075
 games:
   -
     id: lpifrk64
@@ -83,6 +83,8 @@ players:
     image: playerimage.jpeg
     type: new_set
     enabled: true
+    goals: 4
+    assists: 2
   -
     id: lpifvz5q
     first_name: Brandon
@@ -109,6 +111,8 @@ players:
     image: playerimage.jpeg
     type: new_set
     enabled: true
+    goals: 1
+    assists: 3
   -
     id: lpifwyru
     first_name: Will

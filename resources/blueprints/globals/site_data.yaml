@@ -129,3 +129,24 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  footer:
+    display: Footer
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: footer_logos
+            field:
+              mode: default
+              create: true
+              collections:
+                - sponsers
+              type: entries
+              display: 'Footer Logos'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

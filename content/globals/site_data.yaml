@@ -8,3 +8,7 @@ data:
   school_city: Springfield
   school_state: Missouri
   zip_code: 63117
+  footer_logos:
+    - 90ddffd9-8d1e-4310-b533-c7bb2b25e651
+    - 0da46dc2-3c0d-49ce-812c-5efaa28b8a9b
+    - 5502abe6-d7f9-4383-81e3-3911d63fdf49
