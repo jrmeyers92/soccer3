@@ -7,7 +7,7 @@ year: 2023
 sport: soccer
 team: jv
 updated_by: dcb3e717-ab7c-4904-ad16-fd20b558ff69
-updated_at: 1701378690
+updated_at: 1701492130
 games:
   -
     id: lpifrk64
@@ -120,4 +120,8 @@ players:
     image: playerimage.jpeg
     type: new_set
     enabled: true
+head_coach: a57af665-5da4-44d4-9909-ac348c318d2d
+assistant_coaches:
+  - 85266fbc-c106-47ad-93fd-fe1fc1fe9d43
+  - 1e700256-52b5-4236-a83e-f0ef5a7c19e6
 ---
